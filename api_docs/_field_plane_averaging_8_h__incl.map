@@ -1,0 +1,42 @@
+<map id="FieldPlaneAveraging.H" name="FieldPlaneAveraging.H">
+<area shape="rect" id="node1" title=" " alt="" coords="951,5,1119,32"/>
+<area shape="rect" id="node2" href="$_direction_selector_8_h.html" title=" " alt="" coords="82,80,233,121"/>
+<area shape="rect" id="node5" href="$_c_f_d_sim_8_h.html" title=" " alt="" coords="1135,87,1289,114"/>
+<area shape="rect" id="node7" href="$_sim_time_8_h.html" title=" " alt="" coords="541,177,733,203"/>
+<area shape="rect" id="node18" href="$_field_8_h.html" title=" " alt="" coords="1596,266,1761,293"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,177,120,203"/>
+<area shape="rect" id="node4" title=" " alt="" coords="755,348,871,375"/>
+<area shape="rect" id="node6" title=" " alt="" coords="3003,266,3149,293"/>
+<area shape="rect" id="node11" href="$_field_repo_8_h.html" title=" " alt="" coords="2257,177,2455,203"/>
+<area shape="rect" id="node30" href="$_p_d_e_base_8_h.html" title=" " alt="" coords="3083,169,3290,211"/>
+<area shape="rect" id="node38" href="$_physics_8_h.html" title=" " alt="" coords="906,177,1089,203"/>
+<area shape="rect" id="node40" href="$_mesh_map_8_h.html" title=" " alt="" coords="1113,177,1311,203"/>
+<area shape="rect" id="node8" title=" " alt="" coords="576,266,699,293"/>
+<area shape="rect" id="node9" title=" " alt="" coords="195,266,373,293"/>
+<area shape="rect" id="node10" title=" " alt="" coords="397,266,552,293"/>
+<area shape="rect" id="node12" title=" " alt="" coords="2183,423,2241,449"/>
+<area shape="rect" id="node13" title=" " alt="" coords="1361,348,1485,375"/>
+<area shape="rect" id="node14" href="$_field_desc_types_8_h.html" title=" " alt="" coords="2856,423,3091,449"/>
+<area shape="rect" id="node15" href="$_field_utils_8_h.html" title=" " alt="" coords="3325,348,3520,375"/>
+<area shape="rect" id="node16" title=" " alt="" coords="1766,423,1911,449"/>
+<area shape="rect" id="node25" href="$_int_field_8_h.html" title=" " alt="" coords="2694,266,2877,293"/>
+<area shape="rect" id="node26" title=" " alt="" coords="2736,348,2885,375"/>
+<area shape="rect" id="node27" href="$_scratch_field_8_h.html" title=" " alt="" coords="2249,266,2463,293"/>
+<area shape="rect" id="node17" title=" " alt="" coords="3340,423,3505,449"/>
+<area shape="rect" id="node19" title=" " alt="" coords="1259,348,1336,375"/>
+<area shape="rect" id="node20" title=" " alt="" coords="1716,348,1801,375"/>
+<area shape="rect" id="node21" title=" " alt="" coords="1509,348,1641,375"/>
+<area shape="rect" id="node22" href="$incflo__enums_8_h.html" title=" " alt="" coords="3011,348,3199,375"/>
+<area shape="rect" id="node23" href="$_view_field_8_h.html" title=" " alt="" coords="1927,348,2124,375"/>
+<area shape="rect" id="node24" title=" " alt="" coords="1960,423,2091,449"/>
+<area shape="rect" id="node28" title=" " alt="" coords="2601,348,2661,375"/>
+<area shape="rect" id="node29" title=" " alt="" coords="2402,348,2577,375"/>
+<area shape="rect" id="node31" href="$_factory_8_h.html" title=" " alt="" coords="952,266,1131,293"/>
+<area shape="rect" id="node35" href="$_coll_mgr_8_h.html" title=" " alt="" coords="1206,266,1389,293"/>
+<area shape="rect" id="node36" href="$_p_d_e_fields_8_h.html" title=" " alt="" coords="3595,259,3802,300"/>
+<area shape="rect" id="node32" title=" " alt="" coords="1003,348,1083,375"/>
+<area shape="rect" id="node33" title=" " alt="" coords="611,348,731,375"/>
+<area shape="rect" id="node34" title=" " alt="" coords="896,348,979,375"/>
+<area shape="rect" id="node37" title=" " alt="" coords="3667,348,3731,375"/>
+<area shape="rect" id="node39" title=" " alt="" coords="774,266,927,293"/>
+</map>
