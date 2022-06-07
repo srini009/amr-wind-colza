@@ -115,26 +115,30 @@ void ColzaPostProcess::post_advance_work()
         nlevels, outfield->vec_const_ptrs(), m_var_names, mesh.Geom(),
         m_sim.time().new_time(), istep, mesh.refRatio(), bp_mesh);
 
-    ascent::Ascent ascent;
-    conduit::Node open_opts;
-
-#ifdef BL_USE_MPI
-    open_opts["mpi_comm"] =
-        MPI_Comm_c2f(amrex::ParallelDescriptor::Communicator());
-#endif
-    ascent.open(open_opts);
     conduit::Node verify_info;
     if (!conduit::blueprint::mesh::verify(bp_mesh, verify_info)) {
         ASCENT_INFO("Error: Mesh Blueprint Verify Failed!");
         verify_info.print();
     }
 
-    conduit::Node actions;
-    ascent.publish(bp_mesh);
+    int rank;
+    MPI_Comm_rank(amrex::ParallelDescriptor::Communicator(), &rank);
 
-    ascent.execute(actions);
+    auto mesh_str = bp_mesh.to_string("conduit_base64_json", 0, 0, "", "");
 
-    ascent.close();
+    std::vector<size_t>  dimensions = { mesh_str.size()+1 };
+    std::vector<int64_t> offsets    = { 0 };
+
+    int32_t result;
+    m_colza_pipeline.start((uint64_t)tidx);
+
+    m_colza_pipeline.stage("mesh", (uint64_t)tidx, rank, dimensions, offsets,
+                           colza::Type::UINT8, mesh_str.c_str(),
+                           &result);
+
+    m_colza_pipeline.execute((uint64_t)tidx);
+
+    m_colza_pipeline.cleanup((uint64_t)tidx);
 }
 
 void ColzaPostProcess::post_regrid_actions()
