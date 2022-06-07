@@ -41,6 +41,7 @@ option(AMR_WIND_ENABLE_MASA "Enable MASA library" OFF)
 option(AMR_WIND_ENABLE_HYPRE "Enable HYPRE integration" OFF)
 option(AMR_WIND_ENABLE_OPENFAST "Enable OpenFAST integration" OFF)
 option(AMR_WIND_ENABLE_ASCENT "Enable Ascent visualization library" OFF)
+option(AMR_WIND_ENABLE_COLZA "Enable Colza staging area (implies AMR_WIND_ENABLE_ASCENT)" OFF)
 
 #Options for C++
 set(CMAKE_CXX_STANDARD 14)
@@ -155,6 +156,13 @@ if(AMR_WIND_ENABLE_OPENFAST)
   target_link_libraries(${amr_wind_lib_name} PUBLIC ${OpenFAST_LIBRARIES})
 endif()
 
+if(AMR_WIND_ENABLE_COLZA)
+  if(NOT AMR_WIND_ENABLE_ASCENT)
+    message(WARNING "AMR_WIND_ENABLE_COLZA requires AMR_WIND_ENABLE_ASCENT, AMR_WIND_ENABLE_ASCENT will be set to ON")
+    set(AMR_WIND_ENABLE_ASCENT ON)
+  endif()
+endif()
+
 if(AMR_WIND_ENABLE_ASCENT)
   set(CMAKE_PREFIX_PATH ${ASCENT_DIR} ${CMAKE_PREFIX_PATH})
   find_package(Ascent REQUIRED)
@@ -164,6 +172,11 @@ if(AMR_WIND_ENABLE_ASCENT)
     target_link_libraries(${amr_wind_lib_name} PUBLIC ascent::ascent)
   endif()
   target_compile_definitions(${amr_wind_lib_name} PRIVATE AMR_WIND_USE_ASCENT)
+endif()
+
+if(AMR_WIND_ENABLE_COLZA)
+  find_package(colza REQUIRED)
+  target_link_libraries(${amr_wind_lib_name} PUBLIC colza-client)
 endif()
 
 #Build amr-wind and link to amrex library
