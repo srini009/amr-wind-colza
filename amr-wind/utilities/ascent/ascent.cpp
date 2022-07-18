@@ -91,6 +91,8 @@ void AscentPostProcess::post_advance_work()
     ascent::Ascent ascent;
     conduit::Node open_opts;
     open_opts["default_dir"] = getenv("COLZA_WORKING_DIR");
+    amrex::Print() << "COLZA WORKIND DIRECTORY is: " << getenv("COLZA_WORKING_DIR") << std::endl;
+    
 #ifdef BL_USE_MPI
     open_opts["mpi_comm"] =
         MPI_Comm_c2f(amrex::ParallelDescriptor::Communicator());
